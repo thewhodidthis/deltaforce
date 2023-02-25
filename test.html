@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>deltaforce.js</title>
+    <script type="module">
+      import "https://thewhodidthis.github.io/cutaway/main.js"
+      import { assert, report } from "https://thewhodidthis.github.io/tapeless/main.js"
+      import deltaForce from "./main.js"
+
+      const { equal, ok, notOk } = assert
+      const tracker = deltaForce()
+
+      equal
+        .describe("returns lamda on init", "will return")
+        .test(typeof tracker, "function")
+
+      const { state, x, y, z } = tracker()
+
+      equal
+        .test(state, -1)
+
+      notOk
+        .describe("nada")
+        .test(x)
+
+      ok
+        .test(x === y)
+        .describe(null, "will report")
+        .test(y === z)
+
+      report()
+    </script>
+  </head>
+  <body></body>
+</html>

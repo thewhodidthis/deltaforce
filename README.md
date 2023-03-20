@@ -1,6 +1,6 @@
 ## about
 
-Simplifies mouse tracking keeping in mind that `PointerEvent.movementX/Y` might be the more obvious way to go in the near future.
+Simplifies mouse tracking keeping in mind that `PointerEvent.movementX/Y` might be the more obvious way to go in the not too distant future.
 
 ## setup
 

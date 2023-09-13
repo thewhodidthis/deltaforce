@@ -41,7 +41,6 @@
         width: 200px;
       }
       .face {
-        border: 2px solid #fff;
         display: block;
         height: 196px;
         margin: 0;
@@ -71,6 +70,15 @@
       .face-6 {
         background: rgba(0, 255, 255, 0.9);
         transform: rotateX(-90deg) translateZ(100px);
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: #1e1e1e;
+          color: #efefef;
+        }
+        a {
+          color: inherit;
+        }
       }
     </style>
   </head>
